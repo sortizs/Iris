@@ -17,8 +17,9 @@ import app.views
 urlpatterns = [
     # Examples:
     url(r'^$', app.views.home, name='home'),
-    url(r'^contact$', app.views.contact, name='contact'),
-    url(r'^about$', app.views.about, name='about'),
+    
+    # url(r'^contact$', app.views.contact, name='contact'),
+    url(r'^analysis', app.views.analysis, name='analysis'),
     url(r'^login/$',
         django.contrib.auth.views.login,
         {
@@ -26,7 +27,7 @@ urlpatterns = [
             'authentication_form': app.forms.BootstrapAuthenticationForm,
             'extra_context':
             {
-                'title': 'Log in',
+                'title': 'Iniciar sesión',
                 'year': datetime.now().year,
             }
         },

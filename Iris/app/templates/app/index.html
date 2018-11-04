@@ -3,12 +3,19 @@
 {% block content %}
 
 <div class="jumbotron">
-    <h1>Django</h1>
-    <p class="lead">Django is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://www.djangoproject.com/" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+    <h1>
+        <i class="fas fa-eye fa-lg fa-fw"></i>
+        Proyecto Iris
+    </h1>
+    <p class="lead">
+        Sistema de identificac&oacute;n de emociones por medio de expresiones faciales para asistir en el proceso de fortalecimiento de las habilidades argumentativas de las personas.
+    </p>
+    {% if user.is_authenticated %}
+        <a href="analysis.html" class="btn btn-primary">Comenzar analisis</a>
+    {% endif %}
 </div>
 
-<div class="row">
+<!--<div class="row">
     <div class="col-md-4">
         <h2>Getting started</h2>
         <p>
@@ -28,6 +35,6 @@
         <p>You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.</p>
         <p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>
     </div>
-</div>
+</div>-->
 
 {% endblock %}

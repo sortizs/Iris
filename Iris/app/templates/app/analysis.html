@@ -1,0 +1,112 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1>Analisis de emociones</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-primary">
+                <div class="panel-heading" role="tab" id="usuarioHead">
+                    <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#usuario" aria-expanded="true" aria-controls="usuario">
+                            Datos del usuario
+                        </a>
+                    </h4>
+                </div>
+                <div id="usuario" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="usuarioHead">
+                    <div class="panel-body">
+                        <p>Para continuar con el proceso le recomendamos ingresar los datos solicitados a continuaci&oacute;n:</p>
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label for="id_name" class="col-md-2 control-label">Nombre(s)</label>
+                                <div class="col-md-10">
+                                    <input name="name" class="form-control" id="id_name" required="" type="text" maxlength="254" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="id_lastname" class="col-md-2 control-label">Apellidos</label>
+                                <div class="col-md-10">
+                                    <input name="lastname" class="form-control" id="id_lastname" required="" type="text" maxlength="254" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="id_email" class="col-md-2 control-label">Correo electr&oacute;nico</label>
+                                <div class="col-md-10">
+                                    <input name="email" class="form-control" id="id_email" required="" type="email" maxlength="254" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="id_phone" class="col-md-2 control-label">Celular</label>
+                                <div class="col-md-10">
+                                    <input name="phone" class="form-control" id="id_phone" required="" type="tel" maxlength="254" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="id_age" class="col-md-2 control-label">Edad</label>
+                                <div class="col-md-10">
+                                    <input name="age" class="form-control" id="id_age" required="" type="number" maxlength="254" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading" role="tab" id="analisisHead">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#analisis" aria-expanded="false" aria-controls="analisis">
+                            An&aacute;lisis
+                        </a>
+                    </h4>
+                </div>
+                <div id="analisis" class="panel-collapse collapse" role="tabpanel" aria-labelledby="analisisHead">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label class="btn btn-default" for="my-file-selector">
+                                                <input id="my-file-selector" type="file" style="display:none" onchange="$('#upload-file-info').html(this.files[0].name)">
+                                                Seleccionar video
+                                            </label>
+                                            <span class='label label-default' id="upload-file-info"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <video width="500" controls>
+                                            <source src="" type="video/mp4" />
+                                        </video>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <button class="btn btn-success">Iniciar an&aacute;lisis</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <img src="../../static/app/media/graph.jpg" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
