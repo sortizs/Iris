@@ -31,6 +31,18 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="app\faceAPI.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\getFrame.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\graph.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\parseData.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="app\forms.py" />
     <Compile Include="app\models.py" />
     <Compile Include="app\tests.py" />
@@ -46,6 +58,7 @@
   <ItemGroup>
     <Folder Include="app\" />
     <Folder Include="app\migrations\" />
+    <Folder Include="app\media\" />
     <Folder Include="app\static\" />
     <Folder Include="app\static\app\" />
     <Folder Include="app\static\app\content\" />
@@ -83,11 +96,12 @@
     <Content Include="app\static\app\scripts\respond.min.js" />
     <Content Include="app\static\app\scripts\_references.js" />
     <Content Include="app\templates\app\analysis.html" />
-    <Content Include="app\templates\app\contact.html" />
+    <Content Include="app\templates\app\result.html" />
     <Content Include="app\templates\app\index.html" />
     <Content Include="app\templates\app\layout.html" />
     <Content Include="app\templates\app\login.html" />
     <Content Include="app\templates\app\loginpartial.html" />
+    <Content Include="Dockerfile" />
   </ItemGroup>
   <ItemGroup>
     <None Include="readme.html">
